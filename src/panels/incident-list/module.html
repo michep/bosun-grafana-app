@@ -25,8 +25,8 @@
                     <th ng-click="ctrl.sortIncidentsByStatus('CurrentStatus')">Current</th>
                     <th ng-click="ctrl.sortIncidentsByStatus('LastAbnormalStatus')">Last Abnormal</th>
                     <th ng-click="ctrl.sortIncidents('Start')">Start Time</th>
-                    <th ng-click="ctrl.sortIncidents('LastAbnormalTime')">Last Abnormal Time</th>
-                    <th ng-click="ctrl.sortIncidentsByStatus('WorstStatus')">Worst</th>
+                    <!--<th ng-click="ctrl.sortIncidents('LastAbnormalTime')">Last Abnormal Time</th>-->
+                    <!--<th ng-click="ctrl.sortIncidentsByStatus('WorstStatus')">Worst</th>-->
                     <th>Actions</th>
                     <th>Show Details</th>
                     <th ng-if="ctrl.panel.showMulti || ctrl.fullscreen">Action</th>
@@ -47,8 +47,8 @@
                     <td ng-bind="i.CurrentStatus" ng-class="ctrl.statusClass('text-', i.CurrentStatus)"></td>
                     <td ng-bind="i.LastAbnormalStatus" ng-class="ctrl.statusClass('text-', i.LastAbnormalStatus)"></td>
                     <td ng-bind="ctrl.fmtTime(i.Start, true)" ng-class="ctrl.statusClass('text-', i.LastAbnormalStatus)"></td>
-                    <td ng-bind="ctrl.fmtTime(i.LastAbnormalTime, true)" ng-class="ctrl.statusClass('text-', i.LastAbnormalStatus)"></td>
-                    <td ng-bind="i.WorstStatus" ng-class="ctrl.statusClass('text-', i.WorstStatus)"></td>
+                    <!--<td ng-bind="ctrl.fmtTime(i.LastAbnormalTime, true)" ng-class="ctrl.statusClass('text-', i.LastAbnormalStatus)"></td>-->
+                    <!--<td ng-bind="i.WorstStatus" ng-class="ctrl.statusClass('text-', i.WorstStatus)"></td>-->
                     <td>
                         <a ng-if="ctrl.preRelease" class="btn btn-inverse btn-small" ng-click="ctrl.showActionForm(i, 'note')" target="_blank">Add Note </a>
                         <a ng-class="{'disabled': !i.NeedAck}" class="btn btn-inverse btn-small" ng-click="i.NeedAck && ctrl.showActionForm(i, 'ack')" target="_blank">Ack </a>
