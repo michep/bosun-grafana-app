@@ -24,6 +24,7 @@
                     <th ng-click="ctrl.sortIncidents('Subject')">Subject of Last Abnormal Status (if not unknown)</th>
                     <th ng-click="ctrl.sortIncidentsByStatus('CurrentStatus')">Current</th>
                     <th ng-click="ctrl.sortIncidentsByStatus('LastAbnormalStatus')">Last Abnormal</th>
+                    <th ng-click="ctrl.sortIncidents('Start')">Start Time</th>
                     <th ng-click="ctrl.sortIncidents('LastAbnormalTime')">Last Abnormal Time</th>
                     <th ng-click="ctrl.sortIncidentsByStatus('WorstStatus')">Worst</th>
                     <th>Actions</th>
@@ -45,6 +46,7 @@
                     </td>
                     <td ng-bind="i.CurrentStatus" ng-class="ctrl.statusClass('text-', i.CurrentStatus)"></td>
                     <td ng-bind="i.LastAbnormalStatus" ng-class="ctrl.statusClass('text-', i.LastAbnormalStatus)"></td>
+                    <td ng-bind="ctrl.fmtTime(i.Start, true)" ng-class="ctrl.statusClass('text-', i.LastAbnormalStatus)"></td>
                     <td ng-bind="ctrl.fmtTime(i.LastAbnormalTime, true)" ng-class="ctrl.statusClass('text-', i.LastAbnormalStatus)"></td>
                     <td ng-bind="i.WorstStatus" ng-class="ctrl.statusClass('text-', i.WorstStatus)"></td>
                     <td>
