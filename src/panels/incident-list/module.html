@@ -3,8 +3,8 @@
         vertical-align: top;
     }
 </style>
-<div>
-    <div ng-style="{'overflow-y': 'auto', 'max-height': ctrl.row.height}">
+<div style="height: inherit;">
+    <div ng-style="{'overflow-y': 'auto', 'max-height': ctrl.row.height}" style="height: inherit;">
         <div class="pull-right">
             <div class="gf-form" ng-if="ctrl.panel.showMulti || ctrl.fullscreen">
                 <select class="input-small width-8" style="height: 24px" ng-model="ctrl.selectedMultiAction">
