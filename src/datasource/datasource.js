@@ -191,7 +191,11 @@ export class BosunDatasource {
 
             query = this.templateSrv.replace(target.expr, options.scopedVars, 'pipe');
             query = query.replace(/\$start/g, secondsAgo);
-            query = query.replace(/\$ds/g, options.interval);
+            if (!options.interval.endsWith("s")) {
+                query = query.replace(/\$ds/g, options.interval);
+            } else {
+                query = query.replace(/\$ds/g, "1s")
+            }
             queries.push(query);
         }, this));
 
